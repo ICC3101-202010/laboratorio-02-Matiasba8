@@ -100,9 +100,9 @@ namespace Lab02
                 if (Opcion == 4)
                 {
 
-                    //Falta poner el caso en que el nombre de la playlist ya existe.
                     
-                        Console.WriteLine("Ingrese el nombre de la playlist:\n");
+                    
+                    Console.WriteLine("Ingrese el nombre de la playlist:\n");
                     string nombre_playlist = Console.ReadLine();
                     Console.WriteLine("Ingrese el criterio:\n");
                     string criterio = Console.ReadLine();
@@ -118,13 +118,14 @@ namespace Lab02
                        Console.WriteLine("Ingrese otra Opcion del Menu:\n");
                        Opcion = int.Parse(Console.ReadLine());
                     }
-                    // Caso en el cual no existen criterios existentes para la creacion de esa playlist.
+                    // Caso en el cual ya existe este nombre de playlist
                     if (VorF==false && Gestor.False_type_playlist1==0)
                     {
                         Console.WriteLine("Error: Ya existe una playlist con este nombre.\n");
                         Console.WriteLine("Ingrese otra Opcion del Menu:\n");
                         Opcion = int.Parse(Console.ReadLine());
                     }
+                    // Caso en el cual el criterio ingresado no es correcto 
                     else if (VorF == false && Gestor.False_type_playlist1 == 1)
                     {
                         Console.WriteLine("Error: El criterio ingresado no corresponde a los aceptados.\n");
